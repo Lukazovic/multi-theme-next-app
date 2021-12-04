@@ -1,7 +1,7 @@
 import { ThemeProvider } from '../contexts/ThemeContext';
 
 const App = ({ Component, pageProps }) => (
-  <ThemeProvider>
+  <ThemeProvider defaultTheme={pageProps.defaultTheme}>
     <Component {...pageProps} />
   </ThemeProvider>
 );
