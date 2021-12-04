@@ -3,14 +3,10 @@ import HomeTemplate from '../templates/Home';
 
 const HomePage = () => <HomeTemplate />;
 
-export const getServerSideProps = ({ req }: GetServerSidePropsContext) => {
-  const { theme } = req.cookies;
-
-  return {
-    props: {
-      defaultTheme: theme,
-    },
-  };
-};
+export const getServerSideProps = ({ req }: GetServerSidePropsContext) => ({
+  props: {
+    defaultTheme: req.cookies.theme ?? null,
+  },
+});
 
 export default HomePage;

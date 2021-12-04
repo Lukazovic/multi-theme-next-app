@@ -32,8 +32,8 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProvider = memo(
-  ({ children, defaultTheme = 'light' }: ThemeProviderProps) => {
-    const [theme, setTheme] = useState<Theme>(themes[defaultTheme]);
+  ({ children, defaultTheme }: ThemeProviderProps) => {
+    const [theme, setTheme] = useState<Theme>(themes[defaultTheme ?? 'light']);
 
     const toggleTheme = useCallback(() => {
       setTheme(previousTheme => {
@@ -42,7 +42,7 @@ export const ThemeProvider = memo(
         cookie.set('theme', newTheme.name);
         return newTheme;
       });
-    }, [theme]);
+    }, []);
 
     const contextValue = useMemo(
       () => ({
@@ -53,7 +53,7 @@ export const ThemeProvider = memo(
     );
 
     return (
-      <ThemeContext.Provider value={{ ...contextValue }}>
+      <ThemeContext.Provider value={contextValue}>
         <EmotionThemeProvider theme={contextValue.theme}>
           {children}
         </EmotionThemeProvider>
