@@ -317,6 +317,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.0.6.tgz#11c902fc304b733ff8870238ee878a624a3ebf1e"
   integrity sha512-Tj2faobjX49i21akxCJZQiAD2hh6+Wuo/HNGUna9XR74J8WfTageryl5BiKBjIsmXPrt+C6afL4MVZHu9FsQmg==
 
+"@types/js-cookie@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/js-cookie/-/js-cookie-3.0.1.tgz#04aa743e2e0a85a22ee9aa61f6591a8bc19b5d68"
+  integrity sha512-7wg/8gfHltklehP+oyJnZrz9XBuX5ZPP4zB6UsI84utdlkRYLnOm2HfpLXazTwZA+fpGn0ir8tGNgVnMEleBGQ==
+
 "@types/node@*", "@types/node@^16.11.11":
   version "16.11.11"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
